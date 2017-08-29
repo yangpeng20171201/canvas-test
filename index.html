@@ -1,49 +1,182 @@
 <!DOCTYPE html>
-<html>	
+<html>
 	<head>
-		<meta charset="utf-8" />
-		<title>北京首钢学校</title>
-		<style type="text/css">
-			div{
-				width: 500px;
-				height: 100px;
-				background-color: yellow;
-				border: #f000;
-			}
-			#name{
-				text-align: center;
-				border: 6px solid red;
-			}
-			#resume{
-				text-align: center;
-				border: 6px solid red;
-			}
-			
-		</style>
-	</head>
-	<!--This is 段落-->
-	<body>
-		<
-		>
-		<!--h1标签可以独占一行，设置长宽高 --块元素-->
-		<center><h1>个人简介</h1></center>
-		<img src="" />
-			
-		<center>
-			<div id="name"><p>姓名：杨鹏</p>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>个人简历</title>
+    <style type="text/css">
+    	/*初始化*/
+    	*{
+    		/*外边距*/
+    		margin: 0;
+    		/*内边距*/
+    		padding: 0;
+    	}
+    	ul,ol{
+    		/*去掉默认列表样式*/
+    		list-style: none;
+    	}
+    	a{
+    		/*去掉a标签下划线*/
+    		text-decoration: none;
+    		/*设置默认a标签颜色*/
+    		color: #666;
+    	}
+    	/*公共样式*/
+    	.float-l{
+    		/*左浮动*/
+    		float: left;
+    	}
+    	.float-r{
+    		/*右浮动*/
+    		float: right;
+    	}
+    	.float-c{
+    		/*清除浮动*/
+    		clear: both;
+    	}
+    	.center{
+    		/*宽度96%*/
+    		width: 90%;
+    		/*最大宽度750px*/
+    		max-width: 750px;
+    		/*设置水平居中*/
+    		margin: 0 auto;
+    	}
+    	/*页面样式*/
+    	.title{
+    		/*设置宽度*/
+    		width: 120px;
+    		/*设置高度*/
+    		height: 40px;
+    		/*文本垂直居中*/
+    		line-height: 40px;
+    		/*文本水平居中*/
+    		text-align: center;
+    		/*背景颜色*/
+    		background-color: #000;
+    		/*文本颜色*/
+    		color: #fff;
+    		/*内边距*/
+    		padding: 0 30px;
+    		/*容器水平居中*/
+    		margin: 0 auto;
+    	}
+    	.header>p{
+    		/*文本水平居中*/
+    		text-align: center;
+    		/*文本颜色*/
+    		color: #999;
+    		/*外边距*/
+    		margin-top: 20px;
+    	}
+    	.mainNav{
+    		/*外边距*/
+    		margin-top: 20px;
+    		/*文本居中*/
+    		text-align: center;
+    	}
+    	.mainNav>ul{
+    		/*显示为内联块*/
+    		display: inline-block;
+    		/*超出隐藏*/
+    		overflow: hidden;
+    	}
+    	.mainNav>ul>li{
+    		/*内边距*/
+    		padding: 0 10px;
+    		/*外边距*/
+    		margin: 0 5px;
+    	}
+    	.footer{
+    		/*文本居中*/
+    		text-align: center;
+    	}
+    </style>
+</head>
+<body>
+	<div class="center">
+		<!--头部-->
+		<div class="header">
+			<!--标题-->
+			<h2 class="title">个人简历</h2>
+			<!--个人签名-->
+			<p>联系方式：18810015452</p>
 		</div>
-		</center>
-		<center>
-			<div id="resume"><p>性别：男</p>
-			
-		</center>
-		
-		<!--Span标签没有独占一行   内联元素-->
-		<span>学历：大专</span>
-		<p>生日：96-12-01</p>
-		<p>出生地：山西吕梁临县</p>
-		 <h3>性格:活泼开朗，乐于助人，平时爱好看书，善于学习，能够独立完成一些工作，执行力强</h3>
-	     <h2>技能：h5,AndroidApp制作开发，java基础掌握</h2>
-	    </div>
-	</body>
+		<!--主导航-->
+		<div class="mainNav">
+			<ul>
+				<li class="float-l"><a href="#">基本资料</a></li>
+				<li class="float-l"><a href="#">求职方向</a></li>
+				<li class="float-l"><a href="#">技术特长</a></li>
+				<li class="float-l"><a href="#">工作经历</a></li>
+				<li class="float-l"><a href="#">项目经验</a></li>
+				<li class="float-l"><a href="#">自我评价</a></li>
+			</ul>
+		</div>
+		<!--页脚-->
+		<div class="mainBody">
+			<ul>
+				<li>
+					<h3>基本资料</h3>
+					<h4><span>姓  名： 杨鹏 </span></h4>
+					<h4><span>性 别： 男</span></h4>
+					<h4><span>学  历： 大专</span></h4>
+					<h4><span> 籍 贯：山西省吕梁市</span></h4>
+					<h4><span>毕业院校： 北京首钢成才校企合作院  </span></h4>
+					<h4><span> 专 业：web前端工程师</span></h4>
+					<h4><span>联系电话：18810015452 </span></h4>
+					<h4><span>电子邮箱：3063978337@qq.com</span></h4>
+					<h4><span>工作年限：二年  </span></h4>
+					<p>
+						2011年开始自学前端，算入行较早的，可惜资质平平，没做出拿得出手的成绩，有幸目睹前端这几年突飞猛进的发展，我虽然只是一个跟随者，却也深知这是行业的机会，每一个前端路上的同行都应该把握住，前端作为远离业务核心的一环，一直以来可取代性很高，应该时刻保有危机感，即便现在前端热度颇高，但热度总会冷却，技术路上容不下投机的人，忽而看涨忽而看跌，只会把自己耽误了，前端的路还远没有到尽头，需要更强的自我驱动！
+					</p>
+				</li>
+				<li>
+					<h3>求职方向</h3>
+					<p>期望职业： WEB前端开发、移动互联网开发、HTML5工程师</p>
+					<p>求职状态：目前处于离职可随时到岗</p>
+					<p>工作性质：全职</p>
+					<p>期望薪资：5000+</p>
+				</li>
+				<li>
+					<h3>技术特长</h3>
+					<p>1、熟练 HTML5+CSS3 网页布局，能够快速精确还原设计图，了解网页的兼容性并对不同浏览器做处理</p>
+					<p>2、熟练掌握 jQuery 和 javascript，能写原生 js 代码，具有面向对象的编程思想，对 javascript中的原型对象、原型链、作用域链、闭包、回调等有深刻的理解。</p>
+                    <p>3、熟练使用 JSONP解决浏览器端常见的跨域请求问题，熟悉 JSON 数据格式，并了解 XML 数据格式和 http 通信 协议</p>
+                    <p>4、熟练使用Bootstrap等前端UI框架，熟练掌握响应式页面开发</p>
+                    <p>5、熟练使用 AngularJS 进行开发完成数据双向绑定，引入第三方路由模块 ngRoute 配置路由。 </p>
+                    <p>6、熟练使用SVN进行代码版本管理，有Git使用经验</p>
+                    <p>7、熟练使用项目构建工具（如Webpack、Gulp等），能够与后端协商设计科学规范的目录结构</p>
+                    <p>8、了解PHP、Node等后台语言的基本API</p>
+                    <p>9.会简单的java语言，构建Androidy应用App</p>
+                    <p>10.会使用 Elepliece 和 AndroidStudio 工具 </p>
+				</li>
+				<li>
+					<h3>工作经历</h3>
+					<h4>公司一:2014/7--2016/11 XXXX科技有限公司</h4>
+					<h4>工作岗位：Web前端开发 </h4>
+					<h5>工作内容：</h5>
+					<p>1与产品经理及设计人员沟通，了解项目需要，指定切实可行的实施方案；实时更新和修改网站内容，优化页面代码，提高代码的重用</p>
+					<p>2.配合程序员编写部分js交互脚本，并配合后台人员使用ajax调试接口</p>
+					<p>3.根据业务需求，优化完善页面，提高用户体验</p>
+					<p>4.优化页面代码，提高代码的重用性，将代码封装成单独的功能模块</p>
+					<p>5.对代码进行查漏补缺并配合测试人员进行多浏览器兼容性调试</p>
+				</li>
+				<li>
+					<h3>项目经验</h3>
+					
+				</li>
+				<li>
+					<h3>自我评价</h3>
+					<p>1、好奇心强，爱研究新的技术</p>
+					<p>2、学习能力强，比较有耐心</p>
+					<p>3、具有较强的责任心和团队精神</p>
+					<p>4、性格比较阳光，业余爱好比较多</p>
+				</li>
+			</ul>
+		</div>
+		<div class="footer">Github地址：xxx.github.io/html/index.html</div>
+	</div>
+
 </html>
