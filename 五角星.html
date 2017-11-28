@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<canvas id="myCanvas" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext('2d');
+		canvas.width = 300;
+		canvas.height = 300;
+		create5star(context);
+		context.stroke();
+		function create5star(context) {
+			var dx = 200;
+			var dy = 100;
+			var s = 100;
+			context.beginPath();
+			context.fillStyle = "red";
+			var dig = Math.PI / 5 * 4;
+			for(var i = 0; i < 5; i++) {
+				var x = Math.sin(i * dig);
+				var y = Math.cos(i * dig);
+				context.lineTo(dx + x * s, dy + y * s);
+			}
+			context.closePath();
+		}
+	</script>
+
+</html>

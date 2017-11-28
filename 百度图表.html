@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>百度图表</title>
+		<script src="https://cdn.bootcss.com/echarts/3.8.5/echarts-en.common.js"></script>
+	</head>
+	<body>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '移动互联全栈班出勤统计表',
+                x: 0,
+                y: 0,
+                textStyle: {
+                	fontSize: 18,
+							    fontWeight: 'bolder',
+							    color: '#f33'
+                },
+                borderWidth: 5,
+                borderColor: '#f00',
+                borderRadius: 6,
+                padding: 10
+            },
+            toolbox: {
+            	show: true,
+            	borderWidth: 10,
+            	padding: 20
+            },
+            tooltip: {
+            	showContent: true,
+            	enterable: true
+            },
+            legend: {
+                data:['出勤情况表1','出勤情况表2'],
+                padding: 10,
+                x: 'right',
+                y: 'bottom'
+            },
+            xAxis: {
+                data: ["星期一","星期二","星期三","星期四","星期五"]
+            },
+            yAxis: {},
+            series: [{
+                name: '出勤情况表1',
+                type: 'bar',
+                data: [17, 19, 16,18,10],
+                max: 20
+            },{
+                name: '出勤情况表2',
+                type: 'bar',
+                data: [13, 16, 19,10,5],
+                max: 20
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+	</body>
+</html>

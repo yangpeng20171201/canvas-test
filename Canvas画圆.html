@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<!--在画圆的时候，使用下面的方法
+arc(x,y,r,start,stop)
+画布的左上角坐标为0,0
+ x：圆心在x轴上的坐标
+ y：圆心在y轴上的坐标
+ r：半径长度
+ start：起始角度，以弧度表示，圆心平行的右端为0度
+ stop：结束角度，以弧度表示
+注意：Math.PI表示180°，画圆的方向是顺时针-->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<!--arc(x,y,r,start,stop)
+实际上我们在绘制圆形时使用了 "ink" 的方法, 比如 stroke() 或者 fill().-->
+	<body>
+		<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+您的浏览器不支持 HTML5 canvas 标签。</canvas>
+
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.beginPath();
+			ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+			ctx.stroke();
+		</script>
+
+	</body>
+
+</html>

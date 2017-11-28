@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				text-align: center;
+			}
+			canvas{
+				width: 800px;
+				height: 600px;
+				border: 1px solid #000;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="800" height="600"></canvas>
+	</body>
+	<script>
+		var canvas = document.getElementById('canvas');
+		var ctx = canvas.getContext('2d');
+		drawS(ctx,200,200,100,5,'#f00','#ff0');
+		function drawS(ctx,x,y,r,n,strokeC,fillC){
+			var hudu = Math.PI*4/n;
+			ctx.beginPath();
+			ctx.lineWidth = 2;
+			ctx.strokeStyle = strokeC;
+			ctx.fillStyle = fillC;
+			for(var i = 0; i < n; i++){
+				ctx.lineTo(x + Math.sin(i*hudu)*r,y - Math.cos(i*hudu)*r);
+			}
+			//关闭路径
+			ctx.closePath();
+			ctx.stroke();
+			ctx.fill();
+		}
+
+		setTimeout(function(){
+			ctx.clearRect(0,0,800,600);
+		},5000);
+		setTimeout(function(){
+			drawS(ctx,200,200,100,5,'#f00','#ff0');
+		},10000);
+//		var x = 200;
+//		var y = 200;
+//		var n = 5;
+//		var r = 100;
+//		var hudu = (Math.PI/180)*720/n;
+//		
+//		var x1 = x + Math.sin(0*hudu)*r;
+//		var y1 = y - Math.cos(0*hudu)*r;
+//		
+//		
+//		var x2 = x + Math.sin(1*hudu)*r;
+//		var y2 = y - Math.cos(1*hudu)*r;
+//		
+//		
+//		var x3 = x + Math.sin(2*hudu)*r;
+//		var y3 = y - Math.cos(2*hudu)*r;
+//		
+//		
+//		var x4 = x + Math.sin(3*hudu)*r;
+//		var y4 = y - Math.cos(3*hudu)*r;
+//		
+//		var x5 = x + Math.sin(4*hudu)*r;
+//		var y5 = y - Math.cos(4*hudu)*r;
+//		
+//		
+//		ctx.beginPath();
+//		ctx.lineWidth = 1;
+//		ctx.strokeStyle = '#eee';
+//		ctx.fillStyle = '#ff0';
+//		ctx.lineTo(50,200)
+//		ctx.lineTo(350,200)
+//		//关闭路径
+//		ctx.closePath();
+//		ctx.stroke();
+//		
+//		ctx.beginPath();
+//		ctx.lineWidth = 1;
+//		ctx.strokeStyle = '#eee';
+//		ctx.fillStyle = '#ff0';
+//		ctx.lineTo(200,50);
+//		ctx.lineTo(200,350);
+//		//关闭路径
+//		ctx.closePath();
+//		ctx.stroke();
+//		
+//		
+//		
+//		//开始一个路径
+//		ctx.beginPath();
+//		ctx.lineWidth = 2;
+//		ctx.strokeStyle = '#f00';
+//		ctx.fillStyle = '#ff0';
+//		for(var i = 0; i < n; i++){
+//			ctx.lineTo(x + Math.sin(i*hudu)*r,y - Math.cos(i*hudu)*r);
+//		}
+//		//关闭路径
+//		ctx.closePath();
+//		ctx.stroke();
+//		
+//		ctx.beginPath();
+//		ctx.lineWidth = 1;
+//		ctx.strokeStyle = '#0f0';
+//		ctx.fillStyle = '#ff0';
+//		ctx.lineTo(x,y);
+//		ctx.lineTo(x2,y2);
+//		ctx.lineTo(x,y2);
+//		//关闭路径
+//		ctx.closePath();
+//		ctx.stroke();
+		
+		
+		
+	</script>
+</html>
+
